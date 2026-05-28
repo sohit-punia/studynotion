@@ -57,3 +57,9 @@ app.get("/", (req, res)=>{
 app.listen(PORT, ()=>{
     console.log(`Your app is running at ${PORT}`);
 })
+
+const https = require('https');
+setInterval(() => {
+    https.get('https://studynotion-backend-tgih.onrender.com/');
+    console.log("Self ping to keep server alive");
+}, 14 * 60 * 1000); // every 14 minutes
