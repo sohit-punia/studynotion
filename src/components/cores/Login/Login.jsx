@@ -15,7 +15,7 @@ const Login = () => {
     const [showPassword, setShowPassword] = useState(false);
 
     const [formdata, SetFormData] = useState({
-        email:"studynotaiontest@gmail.com", password:"12345" 
+        email:"", password:"" 
     })
 
     const { email, password } = formdata;
