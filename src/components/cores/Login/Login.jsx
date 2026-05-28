@@ -34,13 +34,14 @@ const Login = () => {
     }
 
   return (
-    <form action="" className='flex flex-col gap-[12px] ' onSubmit={handleOnSubmit}>
+    <form action="" autoComplete="off" className='flex flex-col gap-[12px] ' onSubmit={handleOnSubmit}>
                       {/* <DummyEmailModal /> */}
                       
                     <div className='flexcolgap'>
                    
                         <span>Email Address <sup>*</sup> </span>
                         <input type="email"
+                                autoComplete="off"
                                 placeholder='Enter email address' 
                                 name='email'
                                 value={formdata.email}
@@ -59,7 +60,8 @@ const Login = () => {
                                         <AiOutlineEyeInvisible/>
                                     }
                                 </span>
-                                <input type={`${showPassword? "text" : "password"}`}    
+                                <input type={`${showPassword? "text" : "password"}`}  
+                                         autoComplete="new-password"  
                                         placeholder='Enter password' 
                                         name='password'
                                         value={formdata.password}
